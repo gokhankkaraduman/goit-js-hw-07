@@ -1,0 +1,70 @@
+/* Body Ortalaması */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    /* Hafif bir arka plan rengi */
+    font-family: 'Roboto', sans-serif;
+    /* Modern yazı tipi */
+}
+
+/* Widget */
+.widget {
+    width: 350px;
+    background-color: #1e7f8e;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    /* Köşeler yumuşatıldı */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Hafif gölge */
+    text-align: center;
+    /* İçerik ortalansın */
+}
+
+/* Paragraf */
+.widget p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    text-shadow: none;
+    /* Gölgeyi kaldırdım, sade bir görünüm */
+    margin: 0;
+}
+
+/* Span için Renk Değişikliği */
+.color {
+    font-weight: bold;
+    color: #159bb4;
+}
+
+/* Buton */
+button {
+    background-color: #159bb4;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Hover ve Focus Efekti */
+button:hover,
+button:focus {
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+body > p {
+    position: absolute;
+    top:0;
+    left:0;
+}

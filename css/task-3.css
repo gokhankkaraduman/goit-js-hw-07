@@ -1,0 +1,28 @@
+#name-input{
+    border: 1px solid #808080;
+    border-radius: 4px;
+    width: 360px;
+    height: 40px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+    padding:8px 16px;
+    outline: none;
+}
+#name-input::placeholder{
+    color:#159bb4;
+}
+#name-input:hover,
+#name-input:focus{
+    border-color: #159bb4;
+    box-shadow:
+            0 0 10px #25d1e3,
+            /* Ana parlama */
+            0 0 20px rgba(37, 209, 227, 0.7),
+            /* Ekstra parlama */
+            0 0 30px rgba(37, 209, 227, 0.5);
+        /* Dış parlama */
+}

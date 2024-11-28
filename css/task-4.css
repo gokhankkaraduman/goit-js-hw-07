@@ -1,0 +1,153 @@
+:root{
+    --font-family: "Montserrat", serif;
+}
+
+/* Alert kutusu */
+#custom-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: linear-gradient(135deg, #154cb4, #159bb4);
+    color: white;
+    padding: 25px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: none;
+    text-align: center;
+    width: 320px;
+    font-family: var(--font-family);
+    animation: show-alert 0.5s ease-out forwards;
+}
+
+/* Görünme animasyonu */
+@keyframes show-alert {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Kapanma animasyonu */
+@keyframes hide-alert {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+    }
+}
+
+/* Buton */
+#close-alert {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #f15bb5, #e83e99);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+#close-alert:hover {
+    background: linear-gradient(135deg, #e83e99, #f15bb5);
+    transform: scale(1.1);
+}
+
+/* Gizlemek için */
+.hidden {
+    animation: hide-alert 0.5s ease-out forwards;
+}
+
+.login-form{
+    display:flex;
+    flex-direction: column;
+    gap:8px;
+    border-radius: 8px;
+    padding: 24px;
+    width: 408px;
+    height: 256px;
+    background: #fff;
+}
+.login-form > label{
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+}
+.login-form>label>input {
+    font-family: var(--font-family);
+    margin-bottom: 16px;
+    border: 1px solid #808080;
+    border-radius: 4px;
+    width: 360px;
+    height: 40px;
+    outline: none;
+    padding: 0 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Hover Efekti */
+.login-form>label>input:hover {
+    border-color: #159bb4;
+    /* Daha parlak bir mavi */
+    background-color: rgba(21, 76, 180, 0.1);
+    /* Hafif bir mavi dokunuş */
+    box-shadow: 0 4px 6px rgba(21, 76, 180, 0.3);
+    /* Hafif bir gölge */
+}
+
+/* Focus Efekti */
+.login-form>label>input:focus {
+    border-color: #f15bb5;
+    /* Pembe tonlarında bir vurgu */
+    box-shadow: 0 0 8px #f15bb5, 0 0 12px rgba(241, 91, 181, 0.5);
+    /* Neon benzeri efekt */
+    background-color: rgba(241, 91, 181, 0.1);
+    /* Hafif bir pembe dokunuş */
+}
+
+/* Geçiş Hissi için */
+.login-form>label>input::placeholder {
+    font-family: var(--font-family);
+    color: #808080;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.login-form>label>input:hover::placeholder,
+.login-form>label>input:focus::placeholder {
+    opacity: 0.4;
+}
+button{
+    background-color: #159bb4;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Varsayılan gölge */
+    transition: all 0.3s ease; /* Geçiş efektleri */
+}
+button:hover,
+button:focus{
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Daha yoğun gölge */
+    transform: translateY(-2px); /* Buton yukarı kalkar */ 
+}
+
+button{
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Daha az derinlik */
+    transform: translateY(2px); /* Buton aşağı iner */
+}

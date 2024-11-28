@@ -1,0 +1,137 @@
+/* Genel Stil */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Kontroller için stil */
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    animation: fadeIn 1s ease-out;
+}
+
+#controls input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #159bb4;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#controls input:focus {
+    border-color: #3b99d3;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 80%;
+    margin-top: 10px;
+}
+
+button[data-create] {
+    background-color: #159bb4;
+    color: white;
+}
+
+button[data-create]:hover {
+    background-color: #137a91;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button[data-destroy] {
+    background-color: #e83e99;
+    color: white;
+}
+
+button[data-destroy]:hover {
+    background-color: #d2306c;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Kutular için stil */
+#boxes {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.box {
+    background-color: #159bb4;
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: scale(0);
+    animation: boxAppear 0.5s forwards;
+}
+
+@keyframes boxAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+body > p {
+    position: absolute;
+    top:0;
+    left:0;
+}
+/* Sayısal input'taki artı ve eksi butonlarını gizle */
+#controls input::-webkit-outer-spin-button,
+#controls input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

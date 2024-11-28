@@ -1,0 +1,39 @@
+/* Galeri düzeni */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    /* Resimler satırlara sarılır */
+    gap: 20px;
+    /* Öğeler arasındaki boşluk */
+    list-style: none;
+    padding: 0;
+}
+
+/* Galeri öğelerinin her biri */
+.gallery-item {
+    flex: 1 1 calc(33.33% - 20px);
+    /* 3 eşit genişlikte öğe */
+    box-sizing: border-box;
+    /* Padding ve border'ın genişliği etkilememesi için */
+    overflow: hidden;
+    /* Büyütme sırasında taşan kısmı gizler */
+}
+
+/* Resim düzeni */
+.gallery-image {
+    display: block;
+    width: 100%;
+    /* Resmi container genişliğine göre sığdırır */
+    height: auto;
+    /* Boyutların orantılı kalmasını sağlar */
+    border-radius: 8px;
+    /* Kenarları yuvarlatmak için */
+    transition: transform 0.3s ease-in-out;
+    /* Yumuşak geçiş efekti */
+}
+
+/* Büyütme efekti */
+.zoomed {
+    transform: scale(1.5);
+    /* Fotoğrafı %50 büyütme */
+}
